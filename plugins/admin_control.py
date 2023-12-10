@@ -100,7 +100,7 @@ async def re_enable_chat(bot, message):
     await message.reply("Cʜᴀᴛ Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Rᴇ-Eɴᴀʙʟᴇᴅ")
 
 
-@Client.on_message(filters.command('stats') & filters.incoming)
+@Client.on_message(filters.command('stats') & filters.incoming  & filters.user(ADMINS))
 async def get_ststs(bot, message):
     rju = await message.reply('<b>Pʟᴇᴀꜱᴇ Wᴀɪᴛ...</b>')
     total_users = await db.total_users_count()
@@ -373,10 +373,18 @@ async def log_file(bot, msg):
 
 
 @Client.on_message(filters.command("restart") & filters.user(ADMINS))
-async def restart_bot(bot, msg):
-    await msg.reply("Rᴇꜱᴛᴀᴛɪɴɢ........")
-    await asyncio.sleep(2)
-    await sts.delete()
+# async def restart_bot(bot, msg):
+#     await msg.reply("Rᴇꜱᴛᴀᴛɪɴɢ........")
+#     await asyncio.sleep(2)
+#     await sts.delete()
+#     os.execl(sys.executable, sys.executable, *sys.argv)
+
+# restart new message 
+
+async def stop_button(bot, message):
+    msg = await bot.send_message(text="**🔄 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙴𝚂 𝚂𝚃𝙾𝙿𝙴𝙳. 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶...**", chat_id=message.chat.id)       
+    await asyncio.sleep(3)
+    await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 

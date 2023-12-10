@@ -200,10 +200,10 @@ Mʏ Nᴀᴍᴇ Is {bot}.
 
 
     STATUS_TXT = """<b>◉ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ: <code>{}</code>
-◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code> Only admin</code>  
-◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code> Only admin</code>
-◉ ᴜꜱᴇᴅ ᴅʙ ꜱɪᴢᴇ: <code> Only admin</code>
-◉ ꜰᴇᴇᴇ ᴅʙ ꜱɪᴢᴇ: <code>Only admin </code></b>"""
+◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ:<code>{} </code>  
+◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ:<code>{}} </code>
+◉ ᴜꜱᴇᴅ ᴅʙ ꜱɪᴢᴇ:<code>{}}</code>
+◉ ꜰᴇᴇᴇ ᴅʙ ꜱɪᴢᴇ:<code>{}</code></b>"""
 
     LOG_TEXT_G = """<b>#ɴᴇᴡ_ɢʀᴏᴜᴩ
 
@@ -215,6 +215,7 @@ Mʏ Nᴀᴍᴇ Is {bot}.
 <li><b>Link:</b> @{c}</li>
 <li><b>Members:</b> <code>{d}</code></li>
 <li><b>Added By:</b> {e}</li>
+<li><b>Mʏ Nᴀᴍᴇ Is </b> {bot}.</li>
 </ul>
 
 <p style="font-weight: bold;">Information by: @{f}</p>
@@ -228,6 +229,7 @@ Mʏ Nᴀᴍᴇ Is {bot}.
 <li><b>User ID:</b> <code>{}</code></li>
 <li><b>Account Name:</b> {}</li>
 <li><b>Username:</b> @{}</li>
+<li><b>Mʏ Nᴀᴍᴇ Is </b> {bot}.</li>
 </ul>
 
 <p style="font-weight: bold;">Information by: @{}</p>
@@ -305,7 +307,11 @@ Wᴇʟᴄᴏᴍᴇ ᴛᴏ {chat}.
 🏷 Tɪᴛʟᴇ: <a href={url}>{title}</a>
 🎭 Gᴇɴʀᴇꜱ: {genres}
 📆 Yᴇᴀʀ: <a href={url}/releaseinfo>{year}</a>
-🌟 Rᴀᴛɪɴɢ: <a href={url}/ratings>{rating}</a>/10"""
+🌟 Rᴀᴛɪɴɢ: <a href={url}/ratings>{rating}</a>/10
+
+Requested by : {message.from_user.mention}
+
+"""
    
   
  
